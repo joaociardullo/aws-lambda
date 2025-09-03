@@ -11,7 +11,8 @@ jobs:
 
       - name: Build binary
         run: |
-         zip deploymnet.zip *.mjs node_modules
+          zip -r deployment.zip *.mjs node_modules
+
       - name: default deploy
         uses: appleboy/lambda-action@master
         with:
